@@ -95,6 +95,10 @@
         </div>
     </div>
 
+
+    @include('agamas.create');
+
+
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('sb-admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('sb-admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
