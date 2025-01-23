@@ -21,7 +21,7 @@
     <li class="nav-item">
         <a class="nav-link" href="/penduduk">
             <i class="fas fa-fw fa-users"></i>
-            <span>Penduduk</span></a>
+            <span>Data Penduduk</span></a>
     </li>
 
     <li class="nav-item">
@@ -33,7 +33,13 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route('agamas.index') }}">
             <i class="fas fa-fw fa-table"></i>
-            <span>Agama</span></a>
+            <span>Data Agama</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('rts.index') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Data RT</span></a>
     </li>
 
     <!-- Divider -->

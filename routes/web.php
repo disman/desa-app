@@ -3,7 +3,7 @@
 use App\Http\Controllers\AgamaController;
 use App\Http\Controllers\PendudukController;
 use App\Http\Controllers\ProductController;
-use App\Models\Product;
+use App\Http\Controllers\RtController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -24,6 +24,8 @@ Route::resource('penduduks', PendudukController::class);
 // Route::put('/agamas/{id}', [AgamaController::class, 'update'])->name('agamas.update');
 // Route::delete('/agamas/{id}', [AgamaController::class, 'destroy'])->name('agamas.destroy');
 Route::resource('agamas', AgamaController::class);
+
+Route::resource('rts', RtController::class);
 
 Route::resource('products', ProductController::class);
 

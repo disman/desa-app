@@ -40,14 +40,6 @@ class AgamaController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Agama $agama)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Agama $agama): View
