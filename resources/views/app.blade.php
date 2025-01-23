@@ -96,7 +96,7 @@
     </div>
 
 
-    @include('agamas.create');
+    {{-- @include('agamas.create'); --}}
 
 
     <!-- Bootstrap core JavaScript-->

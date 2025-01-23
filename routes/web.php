@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\AgamasController;
+use App\Http\Controllers\AgamaController;
 use App\Http\Controllers\PendudukController;
+use App\Http\Controllers\ProductController;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,10 +17,20 @@ Route::get('/', function () {
 Route::resource('penduduks', PendudukController::class);
 
 // agamas
-// Route::get('/agamas', [AgamasController::class, 'index'])->name('agamas.index');
-// Route::get('/agamas/create', [AgamasController::class, 'create'])->name('agamas.create');
-// Route::post('/agamas', [AgamasController::class, 'store'])->name('agamas.store');
-// Route::get('/agamas/{id}/edit', [AgamasController::class, 'edit'])->name('agamas.edit');
-// Route::put('/agamas/{id}', [AgamasController::class, 'update'])->name('agamas.update');
-// Route::delete('/agamas/{id}', [AgamasController::class, 'destroy'])->name('agamas.destroy');
-Route::resource('agamas', AgamasController::class);
+// Route::get('/agamas', [AgamaController::class, 'index'])->name('agamas.index');
+// Route::get('/agamas/create', [AgamaController::class, 'create'])->name('agamas.create');
+// Route::post('/agamas', [AgamaController::class, 'store'])->name('agamas.store');
+// Route::get('/agamas/{id}/edit', [AgamaController::class, 'edit'])->name('agamas.edit');
+// Route::put('/agamas/{id}', [AgamaController::class, 'update'])->name('agamas.update');
+// Route::delete('/agamas/{id}', [AgamaController::class, 'destroy'])->name('agamas.destroy');
+Route::resource('agamas', AgamaController::class);
+
+Route::resource('products', ProductController::class);
+
+// Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+// Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+// Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+// Route::put('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+// Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('products.edit');
+// Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
+// Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');

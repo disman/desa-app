@@ -13,8 +13,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    <a href="#" data-toggle="modal" data-target="#agamaModal"
-                        class="btn btn-primary btn-icon-split btn-sm">
+                    <a href="{{ route('agamas.create') }}" class="btn btn-primary btn-icon-split btn-sm">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -27,7 +26,7 @@
                     <table class="table table-bordered" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>No</th>
+                                <th width="80px">No</th>
                                 <th>Agama</th>
                                 <th>Action</th>
                             </tr>
@@ -37,28 +36,23 @@
                             @forelse ($agamas as $agama)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $agama->nama }}</td>
+                                    <td>{{ $agama->agama }}</td>
                                     <td>
                                         <form action="{{ route('agamas.destroy', $agama->id) }}" method="POST">
-                                            <a href="{{ route('agamas.show', $agama->id) }}"
-                                                class="btn btn-info btn-circle btn-sm">
-                                                <i class="fas fa-info-circle"></i>
-                                            </a>
-                                            <a href="{{ route('agamas.edit', $agama->id) }}"
-                                                class="btn btn-success btn-circle btn-sm">
-                                                <i class="fas fa-check"></i>
+                                            <a href="{{ route('agamas.edit', $agama->id) }}" class="btn btn-success btn-sm">
+                                                <i class="fas fa-pen"></i> Edit
                                             </a>
                                             @csrf
                                             @method('DELETE')
-                                            <a href="#" class="btn btn-danger btn-circle btn-sm">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                <i class="fas fa-trash"></i> Delete
+                                            </button>
                                         </form>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td>Tidak ada data agama</td>
+                                    <td colspan="3">Tidak ada data agama</td>
                                 </tr>
                             @endforelse
 
