@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\RtStoreRequest;
-use App\Http\Requests\RtUpdateRequest;
 use App\Models\Rt;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\View\View;
+
+use App\Http\Requests\RtStoreRequest;
+use App\Http\Requests\RtUpdateRequest;
 
 class RtController extends Controller
 {
@@ -15,7 +18,7 @@ class RtController extends Controller
      */
     public function index(): View
     {
-        $rts = Rt::latest()->paginate(3);
+        $rts = Rt::latest()->paginate(5);
         return view('rts.index', compact('rts'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 

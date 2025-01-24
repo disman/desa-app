@@ -58,7 +58,7 @@
 
                         </tbody>
                     </table>
-                    {{ $rts->links() }}
+                    {!! $rts->links() !!}
                 </div>
             </div>
         </div>
