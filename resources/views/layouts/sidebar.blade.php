@@ -25,9 +25,9 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="{{ route('dusuns.index') }}">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
+            <span>Data Dusun</span></a>
     </li>
 
     <li class="nav-item">

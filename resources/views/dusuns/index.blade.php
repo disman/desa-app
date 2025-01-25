@@ -3,7 +3,7 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Data Agama</h1>
+        <h1 class="h3 mb-2 text-gray-800">Data Dusun</h1>
 
         @session('success')
             <div class="alert alert-success" role="alert">{{ $value }}</div>
@@ -13,11 +13,11 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    <a href="{{ route('agamas.create') }}" class="btn btn-primary btn-icon-split btn-sm">
+                    <a href="{{ route('dusuns.create') }}" class="btn btn-primary btn-icon-split btn-sm">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
-                        <span class="text">Tambah Agama</span>
+                        <span class="text">Tambah Dusun</span>
                     </a>
                 </h6>
             </div>
@@ -27,19 +27,21 @@
                         <thead>
                             <tr>
                                 <th width="80px">No</th>
-                                <th>Agama</th>
+                                <th>Nama Dusun</th>
+                                <th>Nama Kepala Dusun</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            @forelse ($agamas as $agama)
+                            @forelse ($dusuns as $dusun)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $agama->agama }}</td>
+                                    <td>{{ $dusun->nama_dusun }}</td>
+                                    <td>{{ $dusun->nama_kadus }}</td>
                                     <td>
-                                        <form action="{{ route('agamas.destroy', $agama->id) }}" method="POST">
-                                            <a href="{{ route('agamas.edit', $agama->id) }}" class="btn btn-success btn-sm">
+                                        <form action="{{ route('dusuns.destroy', $dusun->id) }}" method="POST">
+                                            <a href="{{ route('dusuns.edit', $dusun->id) }}" class="btn btn-success btn-sm">
                                                 <i class="fas fa-pen"></i> Edit
                                             </a>
                                             @csrf
@@ -52,13 +54,13 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="3">Tidak ada data agama</td>
+                                    <td colspan="4">Tidak ada data dusun</td>
                                 </tr>
                             @endforelse
 
                         </tbody>
                     </table>
-                    {{ $agamas->links() }}
+                    {{ $dusuns->links() }}
                 </div>
             </div>
         </div>
