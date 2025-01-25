@@ -28,6 +28,7 @@
                             <tr>
                                 <th width="80px">No</th>
                                 <th>Nama RT</th>
+                                <th>Nama Ketua RT</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -36,7 +37,8 @@
                             @forelse ($rts as $rt)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $rt->rt }}</td>
+                                    <td>{{ $rt->nama_rt }}</td>
+                                    <td>{{ $rt->nama_ketua_rt }}</td>
                                     <td>
                                         <form action="{{ route('rts.destroy', $rt->id) }}" method="POST">
                                             <a href="{{ route('rts.edit', $rt->id) }}" class="btn btn-success btn-sm">
@@ -52,7 +54,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="3">Tidak ada data RT</td>
+                                    <td colspan="4">Tidak ada data RT</td>
                                 </tr>
                             @endforelse
 

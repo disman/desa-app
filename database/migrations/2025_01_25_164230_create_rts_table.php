@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('rts', function (Blueprint $table) {
             $table->id();
-            $table->string('rt');
+            $table->string('nama_rt');
+            $table->string('nama_ketua_rt');
             $table->foreignId('dusun_id')->nullable();
             $table->foreignId('penduduk_id')->nullable();
             $table->timestamps();

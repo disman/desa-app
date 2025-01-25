@@ -22,7 +22,8 @@ class RtUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'rt' => 'required'
+            'nama_rt' => 'required',
+            'nama_ketua_rt' => 'required'
         ];
     }
 }

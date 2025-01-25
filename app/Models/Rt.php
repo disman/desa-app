@@ -10,6 +10,7 @@ class Rt extends Model
 
     use HasFactory;
     protected $fillable = [
-        'rt'
+        'nama_rt',
+        'nama_ketua_rt'
     ];
 }
